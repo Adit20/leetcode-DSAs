@@ -5,9 +5,13 @@ class Solution(object):
         :type val: int
         :rtype: int
         """
-        k = 0
-        for i in range(len(nums)):
-            if nums[i] != val:
-                nums[k] = nums[i]
-                k += 1
-        return k
+        c = 0 
+
+        for i in nums[:]:
+            if i == val:
+                nums.remove(i)
+                c += 1
+            else:
+                pass
+            
+        print(nums)
