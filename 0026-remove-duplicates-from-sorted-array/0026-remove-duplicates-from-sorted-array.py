@@ -4,13 +4,10 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        unique = sorted(set(nums))
+        nums[:] = unique
+        return len(unique)
 
-        i = 1
-
-        for j in range(1, len(nums)):
-            if nums[j] != nums[i - 1]:
-                nums[i] = nums[j]
-                i += 1
         
-        return i
+        
         
