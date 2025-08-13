@@ -6,12 +6,13 @@ class Solution(object):
         :rtype: int
         """
         c = 0 
-
-        for i in nums[:]:
-            if i == val:
-                nums.remove(i)
+        for index in nums[:]:
+            if index == val:
+                nums.remove(index)
                 c += 1
             else:
                 pass
-            
-        print(nums)
+
+        return len(nums)
+
+
